@@ -14,10 +14,10 @@ class CreateNewAccount extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Stack(
       children: [
-        BackgroundImage(image: 'flutter_application_1/assert/osimhen.jpg'),
         Scaffold(
-          backgroundColor: Colors.transparent,
+          backgroundColor: Color.fromARGB(136, 0, 0, 77),
           body: SingleChildScrollView(
+            padding: EdgeInsets.only(top: 20),
             child: Column(
               children: [
                 SizedBox(
