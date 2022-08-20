@@ -10,9 +10,8 @@ class ForgotPassword extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Stack(
       children: [
-        BackgroundImage(image: 'flutter_application_1/assert/osimhen.jpg'),
         Scaffold(
-          backgroundColor: Colors.transparent,
+          backgroundColor: Color.fromARGB(136, 0, 0, 77),
           appBar: AppBar(
             backgroundColor: Colors.transparent,
             elevation: 0,

@@ -4,29 +4,22 @@ import 'package:flutter_application_1/widgets/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class LoginScreen extends StatelessWidget {
-  const LoginScreen({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Stack(
       children: [
+        BackgroundImage(
+          image: 'flutter_application_1/assert/osimhen.jpg',
+        ),
         Scaffold(
-          backgroundColor: const Color.fromARGB(107, 0, 0, 101),
+          backgroundColor: Colors.transparent,
           body: Column(
             children: [
-              const Flexible(
+              Flexible(
                 child: Center(
                   child: Text(
                     'Total Concierge',
                     style: TextStyle(
-                        shadows: [
-                          Shadow(
-                            blurRadius: 10,
-                            color: Colors.black,
-                            offset: Offset(5, 5),
-                          ),
-                        ],
-                        overflow: TextOverflow.visible,
                         color: Colors.white,
                         fontSize: 60,
                         fontWeight: FontWeight.bold),
@@ -36,13 +29,13 @@ class LoginScreen extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
-                  const TextInputField(
+                  TextInputField(
                     icon: FontAwesomeIcons.envelope,
                     hint: 'Email',
                     inputType: TextInputType.emailAddress,
                     inputAction: TextInputAction.next,
                   ),
-                  const PasswordInput(
+                  PasswordInput(
                     icon: FontAwesomeIcons.lock,
                     hint: 'Password',
                     //inputType: TextInputType.visiblePassword,
@@ -50,34 +43,35 @@ class LoginScreen extends StatelessWidget {
                   ),
                   GestureDetector(
                     onTap: () => Navigator.pushNamed(context, 'ForgotPassword'),
-                    child: const Text(
+                    child: Text(
                       'Forgot password',
                       style: kBodyText,
                     ),
                   ),
-                  const SizedBox(
+                  SizedBox(
                     height: 25,
                   ),
-                  const RoundedButton(
+                  RoundedButton(
                     buttonName: 'Login',
+                    
                   ),
-                  const SizedBox(
+                  SizedBox(
                     height: 25,
                   ),
                   GestureDetector(
                     onTap: () =>
                         Navigator.pushNamed(context, 'CreateNewAccount'),
                     child: Container(
-                      decoration: const BoxDecoration(
-                          border: Border(
-                              bottom: BorderSide(width: 1, color: kWhite))),
-                      child: const Text(
+                      child: Text(
                         'Create New Account',
                         style: kBodyText,
                       ),
+                      decoration: BoxDecoration(
+                          border: Border(
+                              bottom: BorderSide(width: 1, color: kWhite))),
                     ),
                   ),
-                  const SizedBox(
+                  SizedBox(
                     height: 20,
                   ),
                 ],
