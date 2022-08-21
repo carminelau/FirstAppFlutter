@@ -2,9 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/palette.dart';
 
 class RoundedButton extends StatelessWidget {
-  const RoundedButton({
+  var onPressed;
+
+  RoundedButton({
     Key? key,
     required this.buttonName,
+    this.onPressed,
   }) : super(key: key);
 
   final String buttonName;
@@ -20,7 +23,7 @@ class RoundedButton extends StatelessWidget {
         color: kblue,
       ),
       child: FlatButton(
-        onPressed: () {},
+        onPressed: onPressed,
         child: Text(
           'Login',
           style: kBodyText.copyWith(fontWeight: FontWeight.bold),

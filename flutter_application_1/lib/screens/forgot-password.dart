@@ -5,13 +5,15 @@ import 'package:flutter_application_1/widgets/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class ForgotPassword extends StatelessWidget {
+  const ForgotPassword({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Stack(
       children: [
         Scaffold(
-          backgroundColor: Color.fromARGB(136, 0, 0, 77),
+          backgroundColor: const Color.fromARGB(136, 0, 0, 77),
           appBar: AppBar(
             backgroundColor: Colors.transparent,
             elevation: 0,
@@ -19,12 +21,12 @@ class ForgotPassword extends StatelessWidget {
               onPressed: () {
                 Navigator.pop(context);
               },
-              icon: Icon(
+              icon: const Icon(
                 Icons.arrow_back_ios,
                 color: kWhite,
               ),
             ),
-            title: Text(
+            title: const Text(
               'Forgot Password',
               style: kBodyText,
             ),
@@ -40,21 +42,21 @@ class ForgotPassword extends StatelessWidget {
                     ),
                     Container(
                       width: size.width * 0.8,
-                      child: Text(
+                      child: const Text(
                         'Enter your email we will send instruction to reset your password',
                         style: kBodyText,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
-                    TextInputField(
+                    const TextInputField(
                       icon: FontAwesomeIcons.envelope,
                       hint: 'Email',
                       inputType: TextInputType.emailAddress,
                       inputAction: TextInputAction.done,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
                     RoundedButton(buttonName: 'Send'),

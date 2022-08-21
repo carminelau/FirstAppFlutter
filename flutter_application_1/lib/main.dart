@@ -4,10 +4,12 @@ import 'screens/screens.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   //root of app
   @override
   Widget build(BuildContext context) {
@@ -21,9 +23,10 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/',
       routes: {
-        '/': (context) => LoginScreen(),
-        'ForgotPassword': (context) => ForgotPassword(),
-        'CreateNewAccount': (context) => CreateNewAccount(),
+        '/': (context) => const LoginScreen(),
+        'ForgotPassword': (context) => const ForgotPassword(),
+        'CreateNewAccount': (context) => const CreateNewAccount(),
+        'Login': (context) => const ChatPage()
       },
     );
   }
