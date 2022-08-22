@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/palette.dart';
+import 'package:flutter_application_1/widgets/change_theme_button.dart';
 import 'package:flutter_application_1/widgets/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -11,7 +12,6 @@ class LoginScreen extends StatelessWidget {
     return Stack(
       children: [
         Scaffold(
-          backgroundColor: const Color.fromARGB(136, 0, 0, 77),
           body: Column(
             children: [
               const Flexible(
@@ -73,6 +73,7 @@ class LoginScreen extends StatelessWidget {
                   const SizedBox(
                     height: 20,
                   ),
+                  const ChangeThemeButton(),
                 ],
               ),
             ],

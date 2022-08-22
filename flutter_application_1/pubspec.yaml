@@ -46,6 +46,8 @@ dependencies:
   open_file: ^3.2.1
   path_provider: ^2.0.11
   uuid: ^3.0.6
+  shared_preferences: ^2.0.15
+  provider: ^6.0.3
 
 dev_dependencies:
   flutter_test:
