@@ -13,7 +13,7 @@ class ForgotPassword extends StatelessWidget {
     return Stack(
       children: [
         Scaffold(
-          backgroundColor: const Color.fromARGB(136, 0, 0, 77),
+          backgroundColor: Theme.of(context).primaryColor,
           appBar: AppBar(
             backgroundColor: Colors.transparent,
             elevation: 0,

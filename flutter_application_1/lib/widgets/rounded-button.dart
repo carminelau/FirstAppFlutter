@@ -26,7 +26,7 @@ class RoundedButton extends StatelessWidget {
         onPressed: onPressed,
         child: Text(
           'Login',
-          style: kBodyText.copyWith(fontWeight: FontWeight.bold),
+          style: kBodyText2.copyWith(fontWeight: FontWeight.bold),
         ),
       ),
     );

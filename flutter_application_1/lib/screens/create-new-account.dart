@@ -2,7 +2,6 @@
 
 import 'dart:ui';
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/palette.dart';
 import 'package:flutter_application_1/widgets/widgets.dart';
@@ -17,7 +16,7 @@ class CreateNewAccount extends StatelessWidget {
     return Stack(
       children: [
         Scaffold(
-          backgroundColor: Color.fromARGB(136, 0, 0, 77),
+          backgroundColor: Theme.of(context).primaryColor,
           body: SingleChildScrollView(
             padding: EdgeInsets.only(top: 30),
             child: Column(
@@ -36,7 +35,7 @@ class CreateNewAccount extends StatelessWidget {
                           ),
                           child: CircleAvatar(
                             radius: size.width * 0.14,
-                            backgroundColor: Colors.grey.withOpacity(0.4),
+                            backgroundColor: Theme.of(context).iconTheme.color,
                             child: Icon(
                               FontAwesomeIcons.user,
                               color: kWhite,

@@ -3,6 +3,8 @@ import 'package:flutter_application_1/palette.dart';
 import 'package:flutter_application_1/widgets/change_theme_button.dart';
 import 'package:flutter_application_1/widgets/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:flutter_application_1/main.dart';
+import 'package:flutter_application_1/screens/myTheme.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -12,6 +14,13 @@ class LoginScreen extends StatelessWidget {
     return Stack(
       children: [
         Scaffold(
+          backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+          appBar: AppBar(
+            backgroundColor: Colors.orange,
+            actions: [
+              ChangeThemeButton(),
+            ],
+          ),
           body: Column(
             children: [
               const Flexible(
@@ -19,7 +28,7 @@ class LoginScreen extends StatelessWidget {
                   child: Text(
                     'Total Concierge',
                     style: TextStyle(
-                        color: Colors.white,
+                        color: Colors.blue,
                         fontSize: 40,
                         fontWeight: FontWeight.bold),
                   ),
@@ -73,7 +82,7 @@ class LoginScreen extends StatelessWidget {
                   const SizedBox(
                     height: 20,
                   ),
-                  const ChangeThemeButton(),
+                  //const ChangeThemeButton(),
                 ],
               ),
             ],
