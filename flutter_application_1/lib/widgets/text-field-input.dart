@@ -24,7 +24,7 @@ class TextInputField extends StatelessWidget {
         height: size.height * 0.08,
         width: size.width * 0.8,
         decoration: BoxDecoration(
-          color: Colors.grey.withOpacity(0.5),
+          color: const Color.fromARGB(255, 98, 98, 98).withOpacity(0.4),
           borderRadius: BorderRadius.circular(16),
         ),
         child: Center(
@@ -40,9 +40,11 @@ class TextInputField extends StatelessWidget {
                 ),
               ),
               hintText: hint,
-              hintStyle: kBodyText,
+              hintStyle: const TextStyle(
+                  fontSize: 22, height: 1.5, fontWeight: FontWeight.w600),
             ),
-            style: kBodyText,
+            style: const TextStyle(
+                fontSize: 20, height: 1.5, fontWeight: FontWeight.w400),
             keyboardType: inputType,
             textInputAction: inputAction,
           ),

@@ -16,7 +16,6 @@ class CreateNewAccount extends StatelessWidget {
     return Stack(
       children: [
         Scaffold(
-          backgroundColor: Theme.of(context).primaryColor,
           body: SingleChildScrollView(
             padding: EdgeInsets.only(top: 30),
             child: Column(
@@ -38,7 +37,6 @@ class CreateNewAccount extends StatelessWidget {
                             backgroundColor: Theme.of(context).iconTheme.color,
                             child: Icon(
                               FontAwesomeIcons.user,
-                              color: kWhite,
                               size: size.width * 0.1,
                             ),
                           ),

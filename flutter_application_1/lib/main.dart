@@ -4,6 +4,14 @@ import 'package:provider/provider.dart';
 import 'screens/screens.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/screens/myTheme.dart';
+import 'package:flutter_application_1/models/user_model.dart';
+
+UserModel userModel = UserModel(
+    email: "pippo@pippo",
+    name: "pippo",
+    image: "",
+    date: DateTime.now(),
+    uid: "uid");
 
 void main() {
   runApp(const MyApp());
@@ -29,7 +37,12 @@ class MyApp extends StatelessWidget {
             '/': (context) => const LoginScreen(),
             'ForgotPassword': (context) => const ForgotPassword(),
             'CreateNewAccount': (context) => const CreateNewAccount(),
-            'Login': (context) => const ChatPage()
+            'Login': (context) => ChatScreen(
+                  friendId: "",
+                  friendImage: "",
+                  friendName: "",
+                  currentUser: userModel,
+                )
           },
         );
       });

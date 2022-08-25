@@ -14,13 +14,6 @@ class LoginScreen extends StatelessWidget {
     return Stack(
       children: [
         Scaffold(
-          backgroundColor: Theme.of(context).scaffoldBackgroundColor,
-          appBar: AppBar(
-            backgroundColor: Colors.orange,
-            actions: [
-              ChangeThemeButton(),
-            ],
-          ),
           body: Column(
             children: [
               const Flexible(
@@ -28,9 +21,9 @@ class LoginScreen extends StatelessWidget {
                   child: Text(
                     'Total Concierge',
                     style: TextStyle(
-                        color: Colors.blue,
-                        fontSize: 40,
-                        fontWeight: FontWeight.bold),
+                      fontSize: 40,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
               ),
@@ -53,7 +46,10 @@ class LoginScreen extends StatelessWidget {
                     onTap: () => Navigator.pushNamed(context, 'ForgotPassword'),
                     child: const Text(
                       'Forgot password',
-                      style: kBodyText,
+                      style: TextStyle(
+                          fontSize: 20,
+                          height: 1.5,
+                          fontWeight: FontWeight.w500),
                     ),
                   ),
                   const SizedBox(
@@ -61,7 +57,7 @@ class LoginScreen extends StatelessWidget {
                   ),
                   RoundedButton(
                     buttonName: 'Login',
-                    onPressed: () => Navigator.pushNamed(context, 'Login'),
+                    //onPressed: () => Navigator.pushNamed(context, 'Login'),
                   ),
                   const SizedBox(
                     height: 25,
@@ -71,18 +67,20 @@ class LoginScreen extends StatelessWidget {
                         Navigator.pushNamed(context, 'CreateNewAccount'),
                     child: Container(
                       decoration: const BoxDecoration(
-                          border: Border(
-                              bottom: BorderSide(width: 1, color: kWhite))),
+                          border: Border(bottom: BorderSide(width: 1))),
                       child: const Text(
                         'Create New Account',
-                        style: kBodyText,
+                        style: TextStyle(
+                            fontSize: 20,
+                            height: 1.5,
+                            fontWeight: FontWeight.w500),
                       ),
                     ),
                   ),
                   const SizedBox(
                     height: 20,
                   ),
-                  //const ChangeThemeButton(),
+                  ChangeThemeButton(),
                 ],
               ),
             ],

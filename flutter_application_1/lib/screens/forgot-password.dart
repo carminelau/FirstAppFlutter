@@ -13,39 +13,34 @@ class ForgotPassword extends StatelessWidget {
     return Stack(
       children: [
         Scaffold(
-          backgroundColor: Theme.of(context).primaryColor,
-          appBar: AppBar(
-            backgroundColor: Colors.transparent,
-            elevation: 0,
-            leading: IconButton(
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              icon: const Icon(
-                Icons.arrow_back_ios,
-                color: kWhite,
-              ),
-            ),
-            title: const Text(
-              'Forgot Password',
-              style: kBodyText,
-            ),
-            centerTitle: true,
-          ),
           body: Column(
             children: [
+              Padding(
+                padding: const EdgeInsets.only(top: 50, right: 300),
+                child: IconButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  icon: const Icon(
+                    Icons.arrow_back_ios,
+                  ),
+                ),
+              ),
               Center(
                 child: Column(
                   children: [
                     SizedBox(
                       height: size.height * 0.1,
                     ),
-                    Container(
+                    SizedBox(
                       width: size.width * 0.8,
                       child: const Text(
-                        'Enter your email we will send instruction to reset your password',
-                        style: kBodyText,
-                      ),
+                          'Enter your email we will send instruction to reset your password',
+                          style: TextStyle(
+                            fontSize: 22,
+                            height: 1.5,
+                            fontWeight: FontWeight.w600,
+                          )),
                     ),
                     const SizedBox(
                       height: 20,
